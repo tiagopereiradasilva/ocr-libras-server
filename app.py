@@ -14,4 +14,4 @@ def upload():
     file = request.files['upFile']
     return read_image(file)
 
-app.run(host='10.0.0.104')
+app.run()
