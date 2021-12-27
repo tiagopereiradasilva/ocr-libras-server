@@ -6,7 +6,7 @@ import re
 from PIL import Image
 
 #executando tesseract instalado no servidor a partir de seu caminho absoluto
-pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Tiago\Desktop\OCR-Libras\Tesseract-OCRbranc\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Tiago\Desktop\OCR-Libras\Tesseract-OCR\tesseract.exe'
 
 #alfabeto com caracteres a serem filtrados
 alfabeto = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
