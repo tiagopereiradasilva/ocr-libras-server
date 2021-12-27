@@ -2,10 +2,7 @@
 from datetime import datetime
 import pytesseract
 import cv2
-
-#importacao para retirar espacos extras nas strings
 import re
-
 from PIL import Image
 
 #executando tesseract instalado no servidor a partir de seu caminho absoluto
@@ -21,10 +18,7 @@ alfabeto = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
 
 # Create a handler for our read (GET) file
 def read_image(file):
-    
-    #reads sended image
-    #file = connexion.request.files['upfile']
-    
+        
     #converts formData to image
     image = Image.open(file)
     image.save("image.png", "PNG")
@@ -34,9 +28,6 @@ def read_image(file):
 
     #convertenco imagem para escala de cinza
     imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-    #aplicando blur na imagem 
-    #imgGray = cv2.GaussianBlur(imgGray,(3,3),0)
 
     #tirando ruidos da imagem
     rect, thresh = cv2.threshold(imgGray,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
@@ -58,7 +49,6 @@ def read_image(file):
     textFinal = ""
 
     contador = 0
-
     #filtrando caracteres que pertencem ao alfabeto definido
     while contador < len(text):
         if text[contador] in alfabeto:
