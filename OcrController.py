@@ -8,7 +8,6 @@ from PIL import Image
 #executando tesseract instalado no servidor a partir de seu caminho absoluto
 pytesseract.pytesseract.tesseract_cmd = r'\tesseract.exe'
 
-
 #alfabeto com caracteres a serem filtrados
 alfabeto = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
 			'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 
@@ -16,7 +15,6 @@ alfabeto = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
 			',', 'Ç', 'Ã', 'Á', 'Â', 'À', 'É', 'Ê', 'Í', 'Ó', 'Ô', 'Õ', 'Ú'
             , '!', '?', ':', '.', ' '}
 
-# Create a handler for our read (GET) file
 def read_image(file):
         
     #converts formData to image
